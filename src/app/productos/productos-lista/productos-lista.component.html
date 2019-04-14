@@ -1,0 +1,8 @@
+  
+ <h1>Listado de artículos:</h1> 
+  <app-producto-item  *ngFor="let producto of productos"  [producto]="producto" [botonVista]="aparecer"
+                      (borrarProducto)="borrarDelCarrito($event)" (detalleProducto)="detallar($event)" 
+                      (agregarProducto)="agregarAlCarrito($event)">
+  </app-producto-item>
+  <p  *ngIf="aparecer" align="center"><b>Total: ${{total}}</b></p>
+  <p  *ngIf="aparecer" align="center"><b>Cantidad de Productos: #{{cantidad}}</b></p>
